@@ -48,6 +48,15 @@ void Graph::removeNode(std::string from){
     n->remAdjacent(from);
   }
 }
+
+Node* Graph::mostPrereqs(){
+  Node* n = nodes.at(0);
+  for(Node* o: nodes){
+    if(o->getPrereqs() > n->getPrereqs()) n = o;
+  }
+  return n;
+}
+
 std::vector<Node*> Graph::getNodes() const{ return nodes; }
 
 void Graph::printGraph(){

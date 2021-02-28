@@ -31,6 +31,7 @@ class Graph {
     void addNode(std::string);
     void addEdge(std::string, std::string);
     void removeNode(std::string);
+    Node* mostPrereqs();
     std::vector<Node*> getNodes() const;
     void printGraph();
     ~Graph();

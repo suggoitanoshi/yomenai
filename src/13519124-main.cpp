@@ -29,6 +29,11 @@ int main(int argc, char ** argv){
   }
   fileStream.close();
 
+  std::cout << "Jumlah mata kuliah: " << g.getNodes().size() << std::endl;
+  Node *most;
+  most = g.mostPrereqs();
+  std::cout << "Prasyarat terbanyak: " << most->getName() << ", dengan " << most->getPrereqs() << " prasyarat" << std::endl;
+
   std::vector<std::vector<std::string>*>* sorted = TopoSort(g);
   int counter;
   for(int c = sorted->size()-1; c >= 0; c--){
