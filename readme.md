@@ -23,3 +23,7 @@ environment variable `TEST_FILE`, misal `TEST_FILE="test/test4" make run`.
 ## Screenshot
 ![tanpa environment variable TEST_FILE](imgs/1.png)
 ![dengan environment variable TEST_FILE](imgs/2.png)
+
+## Author
+Fransiskus Febryan Suryawan
+13519124
