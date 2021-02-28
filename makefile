@@ -14,7 +14,7 @@ OBJS = $(patsubst %,$(OUT)/$(NIM)-%.o, $(_FILES))
 OUT_NAME = $(PROJ_NAME)
 OUT_FILE = $(patsubst %, $(BIN)/%, $(OUT_NAME))
 
-TEST_FILE ?= test/test
+TEST_FILE ?= test/test1
 
 $(OUT):
 	mkdir -p $@
