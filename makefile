@@ -1,5 +1,6 @@
 CC = g++
 PROJ_NAME = yomenai
+NIM=13519124
 
 SRC = src/
 OUT = out/
@@ -7,7 +8,7 @@ OUT = out/
 HEADERS = headers/
 
 _FILES = main Graph parser TopoSort Num2Roman
-OBJS = $(patsubst %,$(OUT)/%.o, $(_FILES))
+OBJS = $(patsubst %,$(OUT)/$(NIM)-%.o, $(_FILES))
 
 OUT_NAME = $(PROJ_NAME)
 OUT_FILE = $(patsubst %, $(OUT)/%, $(OUT_NAME))
