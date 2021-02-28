@@ -15,6 +15,8 @@ merupakan prasyaratnya.
 ## Cara menjalankan
 TL;DR: `make run`.
 
+Cara menjalankan di linux: menggunakan `make`.
+
 Contoh berkas untuk menguji `main` dapat dilihat pada folder `test`.
 Jika ingin mencoba, gunakan `make run` yang menyebabkan program berjalan dengan
 masukan berkas uji `test`. Jika ingin mencoba dengan berkas yang lain, gunakan
