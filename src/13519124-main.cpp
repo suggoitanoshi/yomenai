@@ -1,3 +1,4 @@
+#include<chrono>
 #include<iostream>
 #include<vector>
 #include<fstream>
@@ -29,12 +30,17 @@ int main(int argc, char ** argv){
   }
   fileStream.close();
 
+  std::chrono::steady_clock sc;
+  auto start = sc.now();
+
   std::cout << "Jumlah mata kuliah: " << g.getNodes().size() << std::endl;
   Node *most;
   most = g.mostPrereqs();
   std::cout << "Prasyarat terbanyak: " << most->getName() << ", dengan " << most->getPrereqs() << " prasyarat" << std::endl;
 
   std::vector<std::vector<std::string>*>* sorted = TopoSort(g);
+
+  std::cout << "Jumlah semester: " << sorted->size() << std::endl;
   int counter;
   for(int c = sorted->size()-1; c >= 0; c--){
     std::cout << "Semester " << Num2Roman(sorted->size()-c) << ": ";
@@ -46,4 +52,7 @@ int main(int argc, char ** argv){
     }
     std::cout << std::endl;
   }
+
+  auto end = sc.now();
+  std::cout << "Waktu proses: " << static_cast<std::chrono::duration<double>>(end-start).count()*1e3 << " milidetik" << std::endl;
 }
